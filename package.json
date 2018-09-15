@@ -1,0 +1,17 @@
+{
+  "name": "command-line-chat",
+  "version": "1.0.0",
+  "description": "Command line chatting app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Suyash Purwar",
+  "license": "ISC",
+  "dependencies": {
+    "@pusher/chatkit-server": "^0.12.2",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
+}
