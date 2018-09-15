@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = requrie('cors');
+const cors = require('cors');
 const Chatkit = require("@pusher/chatkit-server");
 
 const app = express();
@@ -11,7 +11,7 @@ const chatkit = new Chatkit.default({
 });
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/users', (req, res) => {
@@ -38,10 +38,6 @@ app.post('/authenticate', (req, res) => {
 });
 
 const port = 3001;
-app.listen((port, err) => {
-   if (err) {
-      console.log(err);
-   } else {
-      console.log(`Running on port: ${port}`);
-   }
+app.listen(port, () => {
+   console.log(`Running on port: ${port}`);
 });
